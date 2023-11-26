@@ -2,18 +2,12 @@ import './App.css';
 import { useState } from 'react';
 import contactsJson from './contacts.json';
 
-// console.log(randomActor);
-
 function App() {
   const initialContacts = contactsJson.slice(0, 5);
   const [contacts, setContacts] = useState(initialContacts);
-  // const [selectedIndex, setSelectedIndex] = useState(-1);
-  // console.log(contacts.length);
-
   const remainingContacts = contactsJson.filter(
     contact => !contacts.includes(contact)
   );
-  // console.log(remainingContacts.length);
 
   const addRandomContact = () => {
     if (remainingContacts.length > 0) {
